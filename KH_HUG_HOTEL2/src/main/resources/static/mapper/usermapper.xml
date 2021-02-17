@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="kr.iei.hotel.user.model.UserDAO">
+ 	<select id="loginUser" resultType="kr.iei.hotel.user.vo.User" parameterType = "kr.iei.hotel.user.vo.User">
+		select
+			memberMail,
+			memberPssword,
+			memberNick
+			form member
+			where status = 'Y'
+			and memberMail = #{memberMail}
+	</select>
+	
+	<update id="updateUser" parameterType = "kr.iei.hotel.user.vo.User">
+		update
+			member
+			set
+			memberPassword	= #{memberPassword},
+			memberNick		= #{memberNick},
+			memberPhone		= #{memberPhone}
+			where memberMail = #{memberMail}
+	</update>
+ </mapper>
