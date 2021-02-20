@@ -57,22 +57,22 @@
                     <h2>회원정보수정</h2>
                     <br>
         
-                    <form action="update.me" method="post" onsubmit="">
+                    <form action="update.me" method="post">
                         <div class="form-group">
-                            <label for="memberMail">아이디(이메일) :</label>
-                            <input type="text" class="form-control" id="memberMail" name="memberMail" value="${loginUser.memberMail }" readonly><br>
+                            <label for="memberEmail">아이디(이메일) :</label>
+                            <input type="text" class="form-control" id="memberMail" name="memberEmail" value="${loginUser.memberEmail }" readonly><br>
                             
                             <label for="memberPassword">비밀번호:</label>
                             <input type="password" class="form-control" id="memberPassword" name="memberPassword" value="${loginUser.memberPassword }"> <br>
         
                             <label for="userName">* Name :</label>
-                            <input type="text" class="form-control" id="persnal_name" name="persnal_name" value="홍길동" readonly><br>
+                            <input type="text" class="form-control" id="memberName" name="memberName" value="${loginUser.memberName }" readonly><br>
                             
                             <label for="memberNick"> &nbsp; 닉네임</label>
                             <input type="email" class="form-control" id="memberNick" name="memberNick" value="${loginUser.memberNick}"><br>
                             
                             <lable for="birthday">생년월일</lable>
-                            <input type="" class="form-control" id="persnal_birth" name="persnla_birth" vlaue="" readonly><br>
+                            <input type="date" class="form-control" id="memberBirth" name="memberBirth" vlaue="${loginUser.memberBirth }" readonly><br>
         
                             <label for="memberPhone"> &nbsp; Phone :</label>
                             <input type="tel" class="form-control" id="memberPhone" name="memberPhone" value="${loginUser.memberPhone }"><br>
@@ -118,9 +118,9 @@
                                             정말로 탈퇴 하시겠습니까?
                             </b>
         
-                            <form action="" method="post">
+                            <form action="delete.me" method="post">
                                 비밀번호 : 
-                                <input type="password" name="userPwd" required>
+                                <input type="password" name="memberPassword" required>
         
                                 <button type="submit" class="btn btn-danger">탈퇴하기</button>
                             </form>

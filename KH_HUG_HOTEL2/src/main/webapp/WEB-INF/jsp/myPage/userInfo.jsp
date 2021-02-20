@@ -59,7 +59,7 @@
                         회원님께서 문의 하신 내역을
                         확인하실 수 있습니다.
                     </h1>
-                    <p class-"#">
+                    <p class="#">
                          <a href="#" class="btn btn-default btn-lg">1:1문의 하기</a>
                          
                     </p>
